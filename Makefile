@@ -16,7 +16,7 @@ OBJ = $(SRC:.c=.o)
 CFLAGS = -Wall -Wextra -O2 -I$(INC_DIR) -I/usr/include
 
 # Flags d’édition de liens (SDL3 + SDL3_image + SDL3_ttf)
-LDFLAGS = -lSDL3_image -lSDL3_ttf -lSDL3
+LDFLAGS = -lSDL3_image -lSDL3_ttf -lSDL3_mixer -lSDL3
 
 # Règle principale
 all: $(TARGET)

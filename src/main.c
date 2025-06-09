@@ -3,11 +3,13 @@
 int	main()
 {
 	srand(time(NULL));
+	
 	SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_EVENTS);
 	SDL_Window *win = SDL_CreateWindow("JAM", WIDTH, HEIGHT, 0);
 
 	SDL_Renderer *renderer = SDL_CreateRenderer(win, NULL);
 
+	play_music_loop("assets/music.mp3");
 
 	SDL_Surface *surfacePerso = IMG_Load("assets/Player.png");
 	
@@ -229,6 +231,7 @@ int	main()
 		SDL_DestroyTexture(textureRoom[iRoom]);
 		iRoom++;
 	}
+	stop_music();
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(win);
 

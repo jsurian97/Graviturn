@@ -5,6 +5,7 @@
 #include <SDL3/SDL.h>
 #include <SDL3_ttf/SDL_ttf.h>
 #include <SDL3_image/SDL_image.h>
+#include <SDL3_mixer/SDL_mixer.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -102,6 +103,10 @@ void appliquerGraviteGauche(const bool *keys,
 int main(void);
 int Sortie(SDL_FRect *shapePerso, SDL_FRect *shapeSortie);
 int isInsideAll(SDL_FRect *perso, SDL_FRect *room, int modulo);
+
+//music
+void play_music_loop(const char *filepath);
+void stop_music();
 
 #endif // MAIN_H
 
