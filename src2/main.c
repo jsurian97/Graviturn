@@ -87,7 +87,7 @@ int	main()
 	float	gravite = 0.01; // force de gravité constante
 	float	sol_y = 0;   // niveau du sol
 	float	sol_x = 0;
-	float	saut = 1.2;
+	float	saut = 0.8;
 	int		enSaut = 1;
 	int		etat_gravite = GRAVITE_BAS;
 	int		enGravite = 0;
@@ -165,7 +165,7 @@ int	main()
 
 		isInsideAll(&shapePerso, &shapeFakeRoom); //iCol nest plus util
 		iCol++;
-		if (iCol > 500)
+		if (iCol > 100)
 		{
 			iCol = 0;
 			if (!enSaut)
